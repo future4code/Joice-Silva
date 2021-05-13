@@ -43,13 +43,14 @@ const maiorNumeroDoArray = retornaMaiorNumero([1, 20])
 
 */
 
-let quantidadeDePet = Number(prompt('Quantos Bichinhos de estimação você tem?'))
 let quantidadeDePets = []
+let quantidadeDePet = Number(prompt('Quantos Bichinhos de estimação você tem?'))
+
 if (quantidadeDePet === 0) {
     console.log('Que pena! Você pode adotar um pet!')
 } else if(quantidadeDePet > 0) {
     for (let i = 0; <= quantidadeDePet; i++) {
-        pets[i] = prompt('Nome do Pet', ${i+i}:)
+        quantidadeDePets[i] = prompt('Nome do Pet', ${i+i}:)
 
     }
 }
