@@ -10,15 +10,49 @@
  * 
  * 
  */
-    alert("Bem vindo ao jogo de Blackjack!")
-    const cartaUsuario = comprarCarta()
-    const cartaPc = comprarCarta()
 
+    console.log("Bem vindo ao jogo de Blackjack!")
 
+    let jogo = confirm("Quer iniciar uma nova rodada?")
 
-    if(confirm("Quer iniciar uma nova rodada?")) {
+    if (jogo) {
+       let carta1Usuario = comprarCarta()
+       let carta2Usuario = comprarCarta()
+       let carta1Pc = comprarCarta()
+       let carta2Pc = comprarCarta()
+
+       let pontuacaoUsuario = carta1Usuario.valor + carta2Usuario.valor
+       let pontuacaoPc = carta1Pc.valor + carta2Pc.valor
+
+       console.log(`Usuário - Cartas: ${carta1Usuario.texto} ${carta2Usuario.texto} = ${pontuacaoUsuario}`)
+       console.log(`Computador - Cartas: ${carta1Pc.texto} ${carta2Pc.texto} = ${pontuacaoPc}`)
+
+       if (pontuacaoUsuario > pontuacaoPc) {
+         console.log("usuario ganhou!")
+      } else if (pontuacaoPc < pontuacaoUsuario) {
+         console.log("O computador ganhou!")
+      } else {
+         console.log("Empate!")
+      }
+
+    } else {
+       console.log("O jogo acabou")
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+     /*const cartaUsuario = comprarCarta()
+    const cartaPc = comprarCarta()*/
       // o que fazer se o usuário clicar "ok"
-      console.log(`Usuario - Cartas:`, cartaUsuario.texto, `Pontuação`, cartaUsuario.valor)
+     /* console.log(`Usuario - Cartas:`, cartaUsuario.texto, `Pontuação`, cartaUsuario.valor)
       console.log(`Computador - Cartas:`, cartaPc.texto, `Pontuação`, cartaPc.valor)
    } else {
       // o que fazer se o usuário clicar "cancelar"
@@ -28,7 +62,7 @@
    somaDeJogadores = (cartaUsuario, cartaPc) => {
       const somaUsuario = Number(cartaUsuario.valor) + Number(cartaPc.valor)
       console.log(`A soma das cartas do jogador foi ${somaUsuario}`)
-      console.log(`A soma das cartas do computador foi ${somaPc}`)
+      console.log(`A soma das cartas do computador foi ${somaUsuario}`)
       if (somaUsuario > somaPc) {
          console.log("usuario ganhou!")
       } else if (somaUsuario < somaPc) {
