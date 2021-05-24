@@ -31,14 +31,18 @@
         <a id="selected" href="Contato.html">Contato</a>
     </div>
 
-    <div class="main">
-        <h2>Quem sou eu?</h2><br/>
-
-        <img id="img-redondo" src ="img/joice.jfif" alt="imagem da Joice" width="200px" height="200"  >
-        <p>Olá, me chamo Joice, sou estudante em Web Full Stack.<p>
-        <p>Estudo na Labenu, e atualmente me dedico na aprendizagem<p>
-        </p>do Curso em tempo integral.</p>
-
+    <div class="formulario">
+        <h2>Entre em Contato Comigo!</h2>
+        
+        <form id="formulario" autocomplete="off">
+            <fieldset>
+              <legend>Formulário</legend>
+              <label>Nome:</label><input class="campo_nome" type="text"><br>
+              <label>Email:</label><input class="campo_email" type="password"><br>
+              <label>Mensagem:</label><br><textarea class="msg" cols="35" rows="8"></textarea><br>
+              <input class="btn_submit" type="submit" value="Enviar">
+            </fieldset>
+          </form>
     </div>    
 
    
