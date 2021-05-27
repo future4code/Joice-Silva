@@ -2,104 +2,95 @@
     padding: 0;
     margin: 0;
 }
+
+img,video {
+  display: block;
+  max-width: 100%;
+
+}
+
 header {
+  background-color:#daeeff;
     display: flex;
-    flex-grow: 0;
-    position: fixed;
-    margin: 50px;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
     padding: 10px;
-    height: 7px;
-    grid-column-start: 5;
-    grid-column-end: 7;
-    grid-row-start: 3;
-    grid-row-end: 5;
+  
     
 }
 
 .icone-container {
     display: flex;
-    margin: 0 auto;
+    align-items: center;
+    
+    
     
 }
 
 .icone {
-    height: 20px;
-    width: 20px;
+    height: 35px;
+    width: 35px;
     margin-right: 10px;
-    margin: 30px;
-    padding: 9px;
-    align-items: center;
-    
+ 
 }
+
 
 #divBusca{
     display: flex;
     background-color:white;
     border:solid 2px #E0EEEE;
-    border-radius:10px;
-    width:300px;
+   
+    width:250px;
     height:32px;
+    margin: 0 auto;
+    border:1px solid black;
+    
     
   }
   
   #txtBusca{
-    display: flex;
-    align-items: center;
-    float:left;
+    
     background-color:transparent;
-    padding-left:5px;
     font-size:18px;
     border:none;
     height:32px;
     width:191px;
+    padding: 5px;
+    
   }
   
   #btnBusca{
-    display: flex;
-    align-items: center;
-    border:none;
-    float:left;
+    border:1px solid black;
     height:32px;
-    border-radius:0 7px 7px 0;
-    width:40px;
+    padding: 10px;
+    width:50px;
     font-weight:bold;
     background: #E0EEEE;
+    
   }
   
-  #divBusca img{
-    display: flex;
-    align-items: center;
-    float:left;
-  }
+
+  
+
 
   nav {
-    position: fixed;
+   
     display: flex;
     align-items: center;
     padding: 50px;
-    height: 10px;
-    width: 5px;
-    background-color: white;
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 2;
-    grid-row-end: 3;
-    
+    background-color: #daeeff;
+    flex-direction: column;
+    height: 500px;
   }
 
-  .menu {
-      margin-top: auto;
-      margin: 70;
-    padding: 40px;
-    height: 20px;
-    width: 10rem;
-  
+  .botao-nav {
     
+  align-items: center;
+  
   }
 
   .icone-e-texto {
+    
     text-align: center;
   }
 
@@ -107,62 +98,40 @@ header {
     height: 20px;
     width: 20px;
     margin-right: 10px;
+    margin: 0 auto;
     
     
 }
 
   main {
     
-    display: grid;
-    flex-grow: 0;
-    margin: 0 auto;
-    justify-content:center;
-    -ms-grid-row-align: stretch;
-    grid-row: 50px 50px;
-    grid-column-start: 2;
-    grid-column-end: 5;
-    grid-row-start: 2;
-    grid-row-end: 3;
-    grid-template-columns: repeat(4,200px)
+    display: flex;
     
-    
-    
+  }
 
+  .videos {
+    display: flex;
+    flex-wrap: wrap;
   }
 
   .video-e-texto {
-      margin: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+    margin: 10px;
     box-shadow: 2px 2px 5px darkgray ;
     text-align: center;
+    width: 300px;
     
     
   }
 
-  .video-card {
-    margin: 0 auto;
-    padding: 20px;
-    height: 20px;
-    margin: 20px;
-    max-width: 200px;
-    
-  }
+  
 
-  .image-card {
-    padding: 10px;
-    height: 10px;
-    width: 5rem;
-  }
+  
 
   footer {
-    background-color: brown;
-    position: fixed;
+    background-color: #daeeff;
     bottom: 0;
     width: 100%;
-    height: 4%;
+    padding: 20px 0;
     text-align: center;
     align-items: center;
 }
