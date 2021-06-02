@@ -21,6 +21,12 @@
   margin-bottom: 20px;
 }
 
+.paqueno-section-container  {
+  width: 40vw;
+  margin: 10px 0;
+  
+}
+
 h2 {
   display: flex;
   justify-content: center;
