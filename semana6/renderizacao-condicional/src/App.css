@@ -1,8 +1,8 @@
-.LabenuForms {
+.App {
   text-align: center;
 }
 
-.LabenuForms-logo {
+.MainContainer {
   height: 40vmin;
   pointer-events: none;
 }
@@ -13,8 +13,8 @@
   }
 }
 
-.LabenuForms-header {
-  background-color: #282c34;
+.MainContainer {
+  background-color: black;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -24,8 +24,8 @@
   color: white;
 }
 
-.LabenuForms-link {
-  color: #61dafb;
+.MainContainer {
+  color: pink;
 }
 
 @keyframes LabenuForms-logo-spin {
