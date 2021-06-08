@@ -1,30 +1,27 @@
-import React from 'react';
-import styled from 'styled-components'
+import React from "react";
+import PerguntaAberta from "./PerguntaAberta";
+import PerguntaOpcoes from "./PerguntaOpcoes";
 
-
-
-
-const MainContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-`
-
-export default class App extends React.Component {
+class Etapa1 extends React.Component {
   render() {
     return (
-      <MainContainer>
-        
-        <Post
-          nomeUsuario={'Labenu Forms'}
-          fotoUsuario={'https://m.facebook.com/388131481831991/photos/a.388131531831986/575260359785768/?type=3'}
-          
+      <div>
+        <h3>ETAPA 1 - DADOS GERAIS</h3>
+        <PerguntaAberta pergunta={"1. Qual o seu nome?"} />
+        <PerguntaAberta pergunta={"2. Qual sua idade?"} />
+        <PerguntaAberta pergunta={"3. Qual seu email?"} />
+        <PerguntaOpcoes
+          pergunta={"4. Qual a sua escolaridade?"}
+          opcoes={[
+            "Ensino médio incompleto",
+            "Ensino médio completo",
+            "Ensino superior incompleto",
+            "Ensino superior completo"
+          ]}
         />
-
-        
-
-      </MainContainer>
+      </div>
     );
   }
 }
+
+export default Etapa1; 

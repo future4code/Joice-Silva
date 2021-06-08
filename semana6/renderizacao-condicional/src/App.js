@@ -1,43 +1,48 @@
-import React from 'react';
-import styled from 'styled-components'
-import Post from '../src/components/Etapa1+';
+import React from "react";
+import ReactDOM from "react-dom";
 
+import "../src/App.css";
+import Etapa1 from "./components/Etapa1";
+import Etapa2 from "./components/Etapa2";
+import Etapa3 from "./components/Etapa3";
+import Final from "./components/Final";
 
+class App extends React.Component {
+  state = {
+      etapa: 1
+  };
 
-const MainContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-`
+  renderizaEtapa = () => {
+    switch (this.state.etapa) {
+      case 1:
+        return <Etapa1 />;
+      case 2:
+        return <Etapa2 />;
+      case 3:
+        return <Etapa3 />;
+      case 4:
+        return <Final />;
+      default:
+        return <Final />;
+    }
+  };
 
-export default class NameForm extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {value: ''};
-
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
-  }
-
-  handleChange(event) {
-    this.setState({value: event.target.value});
-  }
-
-  handleSubmit(event) {
-    alert('Um nome foi enviado: ' + this.state.value);
-    event.preventDefault();
-  }
+  proximaEtapa = () => {
+    this.setState({ etapa: this.state.etapa + 1 });
+  };
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
-        <label>
-          Nome:
-          <input type="text" value={this.state.value} onChange={this.handleChange} />
-        </label>
-        <input type="submit" value="Enviar" />
-      </form>
+      <div className="App">
+        {this.renderizaEtapa()}
+        <br />
+        {this.state.etapa !== 4 && (
+          <button onClick={this.proximaEtapa}>Próxima etapa</button>
+        )}
+      </div>
     );
   }
 }
+
+const rootElement = document.getElementById("root");
+ReactDOM.render(<App />, rootElement);
