@@ -4,4 +4,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  color: pink;
+  background-color: black;
+}
+
+.button {
+  color: palevioletred;
 }
