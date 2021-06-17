@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+}
+
+.header {
+    background-color: black;
+    height: 70px;
+} 
+
+.menu {
+    margin-top: 10px 0;
+} 
+
+h1 {
+    color: pink;
+    text-align: center;
+}
+ 
+ .menu a {
+     color: salmon;
+     border: 1px solid salmon;
+     padding: 5px;
+     margin: 30px;
+ }
+
+ #selected {
+     color: salmon;
+     border: 2px solid salmon;
+ }
+
+ a {
+     text-decoration: none;
+ }
+ 
+ .main {
+     margin: 30px;
+     text-align: center; 
+     padding: 20px;
+     
+    }
+
+    
+.img-redondo {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+}
+
+form input {
+    display: block;
+}
+
+.habilidades {
+    margin: 50px;
+    text-align: center; 
+    padding: 20px;
+    float: none;
+    
+    
+}
+
+.footer {
+    background-color: salmon;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 15%;
+}
+
+.footer a {
+    color: black;
+}
+
+.header { text-align: center; }
+
+.menu { text-align: center; }
+
+.footer { text-align: center; }
+
+.formulario {
+    background-position: center;
+    padding: 30px;
+     margin: 30px;
+}
+ form {
+     background-color: white;
+    padding: 10px;
+    margin: 3px;
+ }
+
+
