@@ -1,0 +1,23 @@
+h1 {
+    color:rgb(253, 17, 155);
+    background-color:black;
+    
+}
+
+div {
+    background-color: salmon;
+    color:black;
+}
+
+.container { text-align: center; }
+.container { text-align: center; }
+.container { text-align: center; }
+
+
+
+
+  a {
+      border: 2PX solid black;
+      margin: 100px;
+  }
+  
