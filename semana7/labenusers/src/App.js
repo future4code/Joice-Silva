@@ -1,95 +1,44 @@
 import React from 'react'
-import './App.css';
-import axios from 'axios';
-import Button from '../src/Components/Button'
-import styled, { createGlobalStyle } from "styled-components";
-
-const GlobalStyle = createGlobalStyle`
-  * {
-    padding: 0;
-    margin: 0;
-    
-    
-  }
-
-  Container {
-  display: flex;
-
-  align-items: center;
-
-  margin: 20px;
-  font-size: large;
-  
- 
-  }
-
-  container2{
-    align-items: center;
-    
-    margin: 100px;
-  }
-  
-  
-`;
-
-const AppContainer = styled.div`
-  display: flex;
-  background-color: white;
-  
-  border: solid 3px;
-  max-width: 300px;
-  padding: 40px;
-  
-  margin: 120px auto 0 ;
-`;
+import TelaCadastro from './Components/TelaCadastro';
+import TelaListaUsuarios from './Components/TelaListaUsuários';
 
 
-
-
-const url = "https://us-central1-labenu-apis.cloudfunctions.net/labenusers/users";
-const headers = {
-  Authorization: "joice-silva-molina"
-};
 
 export default class App extends React.Component {
   state = {
-    nome: "",
-    email: "",
-    Button: "", 
+     telaAtual:"cadastro"
   }
+
+  escolheTela = () => {
+    switch (this.state.telaAtual){
+      case "cadastro":
+        return <TelaCadastro irParaLista={this.irParaLista}/>
+      case "lista":
+        return <TelaListaUsuarios irParaCadastro={this.irParaCadastro}/>
+      default:
+        return <div>Erro! Página não encontrada :(</div>
+    }
+  }
+
+  irParaCadastro = () => {
+    this.setState( {telaAtual: "cadastro"})
+
+  }
+
+  irParaLista = () => {
+    this.setState( {telaAtual: "lista"})
+
+  }
+
   render() {
     return (
-      <AppContainer>
+      <div>
+        {this.escolheTela()}
         
-        <GlobalStyle/>
-
-        <form>
-          <div1>
-          
-            <container>Nome: 
-            <input for ="" type="text" value=""/>
-            </container>
-
-          
-            <container>E-mail: 
-            <input for="" type="text" value=""/>
-            </container>
-          
-          
-
-         
-            <container2>
-            <input type="submit" value="Salvar" />
-            </container2>
-
-          </div1>
-            
-        </form>
-
-      </AppContainer>
+      </div>
 
         
-    );
+    )
   }
 } 
   
