@@ -1,0 +1,38 @@
+{
+	"info": {
+		"_postman_id": "e241ae37-0398-4e5f-9ac4-d505f82dac4e",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "New Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://documenter.getpostman.com/view/7549981/SztBc8eT?version=latest",
+					"protocol": "https",
+					"host": [
+						"documenter",
+						"getpostman",
+						"com"
+					],
+					"path": [
+						"view",
+						"7549981",
+						"SztBc8eT"
+					],
+					"query": [
+						{
+							"key": "version",
+							"value": "latest",
+							"description": "joice-silva-molina"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
