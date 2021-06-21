@@ -1,43 +1,45 @@
-import React from 'react'
-import AddPlaylists from './Components/AddPlaylists';
-import ListaPlaylists from './Components/ListaPlaylists';
+import React from 'react';
+import styled from "styled-components";
+import Header from './Components/Heaader';
+import PlaylistCreationPage from './Components/PlaylistCreatioonPage';
+import PlaylistManagerPage from './Components/PlaylistManagerPaage';
+
+const AppContainer = styled.div`
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+`
 
 
-
-export default class App extends React.Component {
+class App extends React.Component {
   state = {
-     telaAtual:"AddPlaylists"
+    currentPage: "playlistCreationPage"
   }
 
-  escolheTela = () => {
-    switch (this.state.telaAtual){
-      case "AddPlaylists":
-        return <AddPlaylists irParaListaPlaylists={this.irParaListaPlaylists}/>
-      case "ListaPlaylists":
-        return <ListaPlaylists irParaAddPlaylists={this.irParaAddPlaylists}/>
-      default:
-        return <div>Erro! Página não encontrada :(</div>
+  changePage = (currentPage) => {
+    this.setState({currentPage: currentPage})
+  }
+
+  render () {
+    const renderCurrentPage = () => {
+      if (this.state.currentPage === "playlistCreationPage") {
+        return <PlaylistCreationPage />
+      } else if (this.state.currentPage === "playlistManagerPage") {
+        return <PlaylistManagerPage />
+      }
     }
-  }
 
-  irParaAddPlaylists = () => {
-    this.setState( {telaAtual: "AddPlaylists"})
-
-  }
-
-  irParaListaPlaylists = () => {
-    this.setState( {telaAtual: "ListaPlaylists"})
-
-  }
-
-  render() {
     return (
-      <div>
-        {this.escolheTela()}
-        
-      </div>
-
-        
-    )
+      <AppContainer>
+        <Header 
+          changePage={this.changePage}
+        />
+        {renderCurrentPage()}
+      </AppContainer>
+    );
   }
-} 
+}
+
+export default App;
