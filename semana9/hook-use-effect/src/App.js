@@ -1,20 +1,21 @@
 import React, { useState } from "react";
 import "./index.css";
 import axios from "axios";
-import PokeCard from "./components/PokeCard";
+import PokeCard from "./Components/PokeCard/index"
+
 
 const App = () => {
   
-  const [pokeList] = useState([])
+  
   
 
-  // método que roda após a montagem do componente
-  const pokeList = () => {
-    // função axios que está batendo na API e buscando 151 pokemons
+  
+  const pegaPokemon = () => {
+    
     axios
       .get("https://pokeapi.co/api/v2/pokemon/?limit=151")
       .then(response => {
-        // função que está setando no estado os 151 pokemons
+        
         setpokeList(response.data.results);
       })
       .catch(err => {
@@ -22,7 +23,7 @@ const App = () => {
       });
   };
 
-  const pegaPokemon = (event) => {
+  const pokeList = (event) => {
     setpokeName(event.target.value);
   };
 
