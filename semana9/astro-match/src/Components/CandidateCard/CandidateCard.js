@@ -70,7 +70,9 @@ export default function CandidateCard() {
 
   return (
     <ContainerCard>
-      
+      <div>
+        <ResetButton onClick={resetAllProfiles}>Reset</ResetButton>
+      </div>
       <ProfilePhoto src={profile.photo} />
 
       <InfoProfile>

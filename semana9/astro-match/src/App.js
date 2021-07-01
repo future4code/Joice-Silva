@@ -9,10 +9,11 @@ const ContainerGeral = styled.div`
   display: flex;
   align-items: center; 
   flex-direction: column;
-  background-color: #8C8C8C;
+  
   justify-content: center;
   width: 100%;
   height: 100%;
+  padding: 5px;
   
 `;
 
@@ -21,9 +22,25 @@ const Header = styled.header`
   height: 40px;
   justify-content: flex-end;
   align-items: center;
-  background-color: #F8278A;
+  background-color: #FFFFFF;
+  box-shadow: grey 1px 1px 5px;
   width: 65vh;
   
+`;
+
+const Logo1 = styled.h6`
+  font-size: 20px;
+  align-items: center;
+  color: #F8278A;
+  height: 25px;
+`;
+
+const Logo2 = styled.h6`
+  font-size: 20px;
+  align-items: center;
+  color: #0A0E4D;
+  height: 25px;
+  margin-right: 95px;
 `;
 
 const MatchButton = styled.button`
@@ -34,7 +51,7 @@ const MatchButton = styled.button`
   background-color: white;
   border: 1px solid #f5f6f6;
   :hover {
-    background-color: #f5f6f6;
+    background-color: #F8278A;
   }
   padding: 4px 10px;
   font-size: 12px;
@@ -47,7 +64,7 @@ const ContainerMatchCandidates = styled.div`
   align-items: center;
   background-color: #FFFFFF;
   width: 65vh;
-  height: 90vh;
+  height: 85vh;
   flex-direction: column;
   box-shadow: grey 1px 1px 5px;
   margin: 2px;
@@ -73,8 +90,9 @@ export default function App() {
   return (
     <ContainerGeral>
       <Header>
-        
-        <MatchButton onClick={changePage}>AstroMatch</MatchButton>
+        <Logo1>Astro</Logo1>
+        <Logo2>Match</Logo2>
+        <MatchButton onClick={changePage}>Matches</MatchButton>
       </Header>
 
       {currentPage === "App" ? (

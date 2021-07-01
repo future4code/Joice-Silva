@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
-
+///////////////////// CANDIDATE CARD COMPONENT :
 export const ContainerCard = styled.div`
-  background-color: #ffffff;
+  background-color: #E6E7E9;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -36,17 +36,16 @@ export const Buttons = styled.div`
   width: 45vh;
   margin-top: 0;
   height: 45px;
-  padding: 10px;
   
 `;
 
 export const ButtonX = styled.button`
-  color: red;
+  color: #0A0E4D;
   border-radius: 100%;
   background-color: white;
   border: 1px solid #0A0E4D;
   :hover {
-    background-color: #f5f6f6;
+    background-color: red;
   }
   padding: 6px 12px;
   font-size: 22px;
@@ -60,16 +59,30 @@ export const ButtonHeart = styled.button`
   background-color: white;
   border: 1px solid #F8278A;
   :hover {
-    background-color: #f5f6f6;
+    background-color: #0A0E4D;
   }
   padding: 6px 12px;
   font-size: 22px;
   outline-style: none;
 `;
 
+export const ResetButton = styled.button`
+  
+  color: #F8278A;
+  height: 25px;
+  margin-right: 316px;
+  background-color: #E6E7E9;
+  border: 1px solid #f5f6f6;
+  
+  :hover {
+    background-color: #0A0E4D;
+  }
+  padding: 4px 10px;
+  font-size: 15px;
+  outline-style: none;
+`;
 
-
-
+// MATCH LIST :
 export const ContainerMatchList = styled.div`
   display: flex;
   justify-content: flex-start;
