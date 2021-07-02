@@ -21,6 +21,11 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - [Styled-Components](https://styled-components.com/)
 
 
+## Deploy do Projeto com Surge :dash:
+
+>>>>>>>> http://accidental-minute.surge.sh/
+
+
 
 Feito com :heart: por: 
 <a href="https://github.com/Joice-silva" target="_blank">Joice Silva</a>
