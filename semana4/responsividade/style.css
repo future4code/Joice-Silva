@@ -1,0 +1,155 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+img,video {
+display: block;
+max-width: 100%;
+
+}
+
+header {
+background-color:#daeeff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+
+  
+}
+
+.icone-container {
+  display: flex;
+  align-items: center;
+  
+  
+  
+}
+
+.icone {
+  height: 35px;
+  width: 35px;
+  margin-right: 10px;
+
+}
+
+
+#divBusca{
+  display: flex;
+  background-color:white;
+  border:solid 2px #E0EEEE;
+ 
+  width:250px;
+  height:32px;
+  margin: 0 auto;
+  border:1px solid black;
+  
+  
+}
+
+#txtBusca{
+  
+  background-color:transparent;
+  font-size:18px;
+  border:none;
+  height:32px;
+  width:191px;
+  padding: 5px;
+  
+}
+
+#btnBusca{
+  border:1px solid black;
+  height:32px;
+  padding: 10px;
+  width:50px;
+  font-weight:bold;
+  background: #E0EEEE;
+  
+}
+
+
+
+
+
+nav {
+ 
+  display: flex;
+  align-items: center;
+  background-color: #daeeff;
+  flex-direction: column;
+  height: 275%;
+  
+}
+
+.botao-nav {
+  
+align-items: center;
+
+}
+
+.icone-e-texto {
+
+  
+  text-align: center;
+}
+
+.icone1 {
+  height: 20px;
+  width: 20px;
+  margin-right: 10px;
+  margin: 0 auto;
+  
+  
+}
+
+main {
+  height: 600px;
+  display: flex;
+  overflow-y: scroll;
+  scroll-snap-align: start;
+  
+}
+
+.videos {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.video-e-texto {
+  margin: 10px;
+  box-shadow: 2px 2px 5px darkgray ;
+  text-align: center;
+  width: 300px;
+  
+  
+}
+
+
+
+
+
+footer {
+  background-color: #daeeff;
+  bottom: 0;
+  width: 100%;
+  padding: 20px 0;
+  text-align: center;
+  align-items: center;
+}
+
+body {
+  background-color: whitesmoke;
+  
+}
+
+@media screen and (min-device-whidth : 320px) and (max-device-whidth : 480px) {
+  /* celulares */
+}
+@media screen and (min-device-whidth : 481px) and (max-device-whidth : 800px) {
+  /* tablets */
+}
+@media screen and (min-device-whidth : 1200px) {
+  /* computadores */
+}
