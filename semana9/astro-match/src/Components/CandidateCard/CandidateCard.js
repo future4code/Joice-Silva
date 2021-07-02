@@ -12,9 +12,9 @@ import {
 
 export default function CandidateCard() {
   const [profile, setProfile] = useState({});
-  const [userChoice, setUserChoice] = useState(null);
+  
 
-  //mostrar os perfis que podem dar matches
+  
   useEffect(() => {
     getProfile();
   }, []);
@@ -32,7 +32,7 @@ export default function CandidateCard() {
       });
   };
 
-  //se eu der like tem que ver se o usuario tb deu like:
+  
   const choosePerson = (value) => {
     const body = {
       id: profile.id,
@@ -54,7 +54,7 @@ export default function CandidateCard() {
       });
   };
 
-  //   //resetar todos os perfis
+  
   const resetAllProfiles = () => {
     axios
       .put(

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-///////////////////// CANDIDATE CARD COMPONENT :
+
 export const ContainerCard = styled.div`
   background-color: #E6E7E9;
   display: flex;
@@ -82,32 +82,39 @@ export const ResetButton = styled.button`
   outline-style: none;
 `;
 
-// MATCH LIST :
+
 export const ContainerMatchList = styled.div`
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
+  flex-direction: column;
   box-shadow: grey 1px 1px 5px;
-  width: 45vh;
-  height: 80vh;
-  flex-wrap: wrap;
+  width: 65vh;
+  height: 85vh;
+
+ 
+  
 `;
 
 export const ContainerList = styled.div`
   display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: space-around;
-  margin: 3px;
+  
+  width: 95%;
+  height: 9%;
+  padding: 5px;
+  margin: 5px;
   align-items: center;
+  :hover {
+    background-color: #F8278A;
+  }
+  
 `;
 export const MatchCard = styled.div`
   display: flex;
   align-items: center;
-  flex-direction: column;
+  
   justify-content: flex-start;
   max-height: 80px;
-  flex-wrap: wrap;
+  
+  
 `;
 export const PhotoExemple = styled.img`
   width: 50px;

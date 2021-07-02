@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import "./App.css";
-
 import MatchList from "./Components/MatchList/MatchList";
 import CandidateCard from "./Components/CandidateCard/CandidateCard";
 import styled from "styled-components";
+
 
 const ContainerGeral = styled.div`
   display: flex;
@@ -75,6 +75,7 @@ const ContainerButtons = styled.div`
   justify-content: space-between;
   width: 150px;
 `;
+
 export default function App() {
   const [currentPage, setCurrentPage] = useState("App");
   const [profiles, setProfiles] = useState({});
